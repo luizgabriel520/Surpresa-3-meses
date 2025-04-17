@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+  overflow-x: hidden;
+}
+
+header {
+  height: 100vh;
+  background: url('sua-foto.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+  color: white;
+  font-size: 3em;
+  z-index: 1;
+}
+
+.heart {
+  position: fixed;
+  top: -10px;
+  color: red;
+  animation: fall linear infinite;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.moment {
+  background: #fff0f5;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.moment h3 {
+  margin-bottom: 10px;
+  color: #c2185b;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.mensagem {
+  text-align: center;
+  background: #ffe0ec;
+  padding: 30px;
+  border-radius: 10px;
+  color: #6d214f;
+}
+.carta-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.carta-btn:hover {
+  background: #ad1457;
+}
+
+.carta {
+  background: #fff0f5;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #880e4f;
+}
+.audio-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.audio-btn {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  background-color: #ec407a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.audio-btn:hover {
+  background-color: #ad1457;
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f8bbd0;
+  color: #880e4f;
+}

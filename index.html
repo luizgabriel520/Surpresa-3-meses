@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Meses com Você, Leandra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>3 Meses Luiz Gabriel e Leandra</h1>
+  </header>
+  
+<audio autoplay loop>
+  <source src="Eu vou te amar de sol a sol.mp3" type="audio/mpeg">
+</audio>
+  
+  <section>
+    <h2 class="title">Nossa História</h2>
+    <div class="timeline">
+      <div class="moment">
+        <h3>Como nos conhecemos</h3>
+        <p>Nos encontramos pelas redes sociais, e desde o primeiro "oi" algo mágico aconteceu.</p>
+      </div>
+      <div class="moment">
+        <h3>Nosso Primeiro Encontro</h3>
+        <p>O coração bateu mais forte, o olhar brilhou, e tudo fez sentido.</p>
+      </div>
+      <div class="moment">
+        <h3>O Pedido de Namoro</h3>
+        <p>No dia 18 de janeiro de 2025, começamos oficialmente nossa história juntos.</p>
+      </div>
+      <div class="moment">
+        <h3>Primeira Viagem Juntos</h3>
+        <p>Vivemos momentos inesquecíveis, colecionando memórias e sorrisos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Nossos Momentos</h2>
+    <div class="galeria">
+      <img src="Foto1.jpg" alt="Foto juntos 1">
+      <img src="Foto2.jpg" alt="Foto juntos 2">
+      <img src="Foto3.jpg" alt="Foto juntos 3">
+      <img src="Foto4.jpg" alt="Foto juntos 4">
+    </div>
+  </section>
+  
+  <section class="audio-section">
+  <h2 class="title">Uma Mensagem Minha Para Você</h2>
+  <audio id="audioLeandra" src="Audio1.mp3"></audio>
+  <button onclick="document.getElementById('audioLeandra').play()" class="audio-btn">
+    Ouvir Agora
+  </button>
+</section>
+  
+<button onclick="mostrarCarta()" class="carta-btn">Ler Cartinha</button>
+<div id="carta" class="carta" style="display:none;">
+  <p>Amor, só queria dizer que esses 3 meses ao</p>
+</div>
+  
+  <section>
+    <h2 class="title">Para Você, Meu Amor</h2>
+    <div class="mensagem">
+      <p>Minha Princesa, cada segundo ao seu lado vale mais do que mil palavras. Obrigado por me fazer tão feliz nesses 3 meses incríveis. voce tem me feito o homem mais feliz desse mundo eu queria que esses 3 meses ficasse marcado entre nois entao resolvi criar isso pra voce. Que venham muitos mais ao seu lado!</p>
+    </div>
+  </section>
+  
+  <footer>
+    Feito com amor por Luiz Gabriel
+  </footer>
+  
+<script>
+  function mostrarCarta() {
+    const carta = document.getElementById("carta");
+    carta.style.display = carta.style.display === "none" ? "block" : "none";
+  }
+</script>
+  
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (2 + Math.random() * 3) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
